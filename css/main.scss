@@ -1,0 +1,844 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+$red: #B8121A;
+$orange: #FFBC6B;
+$violet: #464069;
+$white: #fff;
+$transition: all .3s ease;
+
+img {
+  width: auto;
+  height: auto;
+}
+
+html,
+body,
+.wrapper {
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  background: #E5E5E5;
+  border-collapse: collapse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1680px;
+  padding: 0 15px;
+}
+
+.wrapper {
+  overflow-x: hidden;
+}
+
+.a-btn1 {
+  width: 176px;
+  height: 47px;
+  color: $white;
+  border: 3px solid $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: $transition;
+  font-weight: 500;
+  font-size: 18px;
+
+  &:hover {
+    background-color: $white;
+    color: $violet
+  }
+}
+
+.box-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 77px;
+  height: 77px;
+  border: 1px solid #464069;
+}
+
+.header {
+  position: relative;
+  background-image: url(../img/header_bg.png);
+  background-position: left 40px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  &__star {
+    position: absolute;
+    top: -3vw;
+    left: 0vw;
+    width: 20vw;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.menu {
+  max-width: 1720px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 49px auto 0;
+  padding: 0 15px;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: relative;
+
+    .box-border {
+      top: -55%;
+      left: 18%;
+      z-index: -1;
+      border-color: $violet;
+    }
+  }
+
+  &__title {
+    color: $orange;
+    font-weight: 600;
+
+    span {
+      color: #000;
+    }
+  }
+
+  &__desc {
+    margin-left: 5%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__link {
+    border: 1px solid $red;
+    color: $red;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 12px 18px;
+    transition: all .3s ease;
+    text-transform: uppercase;
+
+    w &:hover {
+      color: $white;
+      background-color: $red;
+    }
+
+    &.reserve {
+      color: $white;
+      background-color: $red;
+
+      &:hover {
+        color: $red;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.heading {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+  }
+
+  &__subtitle {
+    font-weight: normal;
+    font-size: 20px;
+    color: $white;
+  }
+
+  &__title {
+    font-size: 50px;
+    color: $orange;
+    margin-top: 15px;
+  }
+
+  &__btn {
+    margin-top: 50px;
+  }
+}
+
+.map {
+  height: 96vh;
+  position: relative;
+  z-index: 1;
+
+  &__star {
+    position: absolute;
+    right: 5vw;
+    top: -6vw;
+    z-index: 1;
+    width: 14vw;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.featured {
+  background: linear-gradient(180deg, #464069 0%, rgba(118, 107, 175, 0) 49.79%);
+  position: relative;
+  padding-bottom: 60px;
+
+  &__stars {
+    position: absolute;
+    top: 7vw;
+    left: 1vw;
+    width: 13vw;
+    z-index: 2;
+  }
+
+  &__heading {
+    background-image: url(../img/feature_bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: -9%;
+    z-index: 1;
+    position: relative;
+
+    &__content {
+      padding: 110px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__title {
+      color: $orange;
+      font-size: 48px;
+      position: relative;
+      z-index: 3;
+
+      .box-border {
+        border-color: $white;
+        left: 87%;
+        top: 0;
+        border-color: #fff;
+        top: -230%;
+        right: -7%;
+        width: 8.8vw;
+        height: 8.8vw;
+      }
+
+      span {
+        color: $white;
+      }
+    }
+
+    &__btn {
+      margin-top: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 50px;
+    color: #464069;
+    display: inline-block;
+    position: relative;
+    margin-top: 5vw;
+
+    &__content {
+      display: flex;
+      justify-content: center;
+    }
+
+    span {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      font-size: 23px;
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__wrapp {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .big_star {
+    position: absolute;
+    right: -8vw;
+    bottom: -24vw;
+    width: 57vw;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__clients {
+    padding-left: 50px;
+    margin-top: 15vw;
+    width: 100%;
+    max-width: 760px;
+    position: relative;
+
+    .logo {
+      position: absolute;
+      left: -18%;
+      bottom: -7vw;
+      width: 31vw;
+
+      img {
+        width: 100%;
+      }
+    }
+
+
+
+    &__subtitle {
+      font-weight: 500;
+      font-size: 24px;
+      color: $violet;
+      position: relative;
+      z-index: 2;
+
+      .box-border {
+        border-color: #FFBC6B;
+        left: -7%;
+        top: -209%;
+        width: 5vw;
+        height: 5vw;
+      }
+
+      .city {
+        position: absolute;
+        top: -11%;
+        left: -5%;
+        width: 4.5vw;
+        z-index: -1;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &__title {
+      margin: 70px 0 30px;
+      color: $red;
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    &__name {
+      font-size: 18px;
+      color: $violet
+    }
+
+    &__desc {
+      font-weight: 500;
+      font-size: 18px;
+      color: $violet
+    }
+
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      grid-gap: 15px;
+    }
+
+    &__btn {
+      width: 177px;
+      height: 80px;
+      border: 2px solid $red;
+      position: relative;
+      margin-left: auto;
+      margin-top: 70px;
+      display: block;
+
+      &:hover {
+        i {
+          transform: translateX(10px);
+        }
+      }
+
+      span {
+        position: absolute;
+        font-weight: bold;
+        font-family: Playfair Display;
+        font-size: 20px;
+        top: 50%;
+        left: -18%;
+        padding: 10px 0;
+        background-color: #E5E5E5;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $red;
+      }
+
+      i {
+        font-size: 24px;
+        transition: $transition;
+
+      }
+    }
+  }
+}
+
+.medal {
+  &__content {
+    display: flex;
+    margin-top: 3vw;
+    margin-left: 2vw;
+  }
+
+  &__item {
+    img {
+      width: 100%;
+    }
+
+    width: 12.3vw;
+  }
+}
+
+.benefits {
+  margin-top: 5vw;
+  position: relative;
+  padding-bottom: 100px;
+
+  &__stars {
+    position: absolute;
+    top: 62vw;
+    left: 6vw;
+    width: 13.5vw;
+    z-index: 2;
+  }
+
+  &__photo {
+    position: absolute;
+    top: 32vw;
+    left: 27vw;
+    width: 79.6vw;
+    z-index: 1;
+  }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 366px;
+    background: linear-gradient(180deg, #464069 0%, rgba(70, 64, 105, 0.3) 100%, rgba(70, 64, 105, 0) 81.06%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+
+  &__img {
+    position: relative;
+    z-index: 2;
+
+    .absolut {
+      position: absolute;
+      top: 15px;
+      left: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    padding-left: 50px;
+    font-weight: 500;
+    font-size: 24px;
+    color: $orange;
+    margin-top: 9vw;
+    position: relative;
+
+    .box-border {
+      border-color: $white;
+      width: 5vw;
+      height: 5vw;
+      left: 0vw;
+      top: -3vw;
+    }
+
+    span {
+      color: $white;
+    }
+  }
+
+  &__text {
+    width: 799px;
+    max-width: 41.6vw;
+    margin-left: auto;
+    margin-top: 20px;
+    position: relative;
+
+    &__title {
+      font-weight: 500;
+      font-size: 24px;
+      color: $orange;
+      text-align: right;
+      padding-right: 50px;
+      margin-bottom: 40px;
+      position: relative;
+
+      .box-border {
+        border-color: $violet;
+        width: 5vw;
+        height: 5vw;
+        right: 1vw;
+        top: -3vw;
+        left: auto;
+      }
+
+      span {
+        color: $violet;
+      }
+    }
+
+    &__desc {
+      font-weight: normal;
+      font-size: 18px;
+      text-align: center;
+      color: $violet;
+      letter-spacing: normal;
+    }
+
+    &__stars-decor {
+      position: absolute;
+      width: 11.8vw;
+      left: 21vw;
+      top: -12vw;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__logo-star {
+      position: absolute;
+      width: 29vw;
+      left: -7vw;
+      top: -8vw;
+
+      img {
+        width: 100%;
+      }
+    }
+
+  }
+
+  &__strategy {
+    max-width: 28.1vw;
+    margin-top: -30px;
+
+    &__title {
+      font-weight: bold;
+      font-size: 18px;
+      color: $orange;
+      margin-bottom: 40px;
+      font-family: Playfair Display;
+    }
+
+    &__desc {
+      font-weight: 300;
+      font-size: 18px;
+      color: $white;
+      letter-spacing: normal;
+    }
+
+    &__btn {
+      display: block;
+      width: 344px;
+      height: 47px;
+      border: 1px solid $orange;
+      color: $orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: $transition;
+      margin-top: 20px;
+
+      &:hover {
+        background-color: $orange;
+        color: $white
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .featured__clients {
+    &__btn {
+      margin-left: 0;
+    }
+
+    .logo {
+      bottom: -14vw;
+      left: 0;
+    }
+  }
+
+  .medal {
+
+    &__content {
+      margin-top: 8vw;
+    }
+
+    &__item {
+      img {
+        width: 100%;
+      }
+
+      width: 14.3vw;
+    }
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .box-border {
+    display: none;
+  }
+
+  .featured {
+    &__heading {
+      margin-top: -18vw;
+
+      &__title {
+        font-size: 4vw;
+      }
+    }
+
+    &__title {
+      font-size: 4vw;
+
+      &__content {
+        margin-top: 2vw;
+      }
+
+      span {
+        font-size: 2.5vw;
+      }
+    }
+  }
+
+  .benefits__stars {
+    top: 53vw;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .benefits {
+    &::before {
+      display: none;
+    }
+
+    &__img,
+    &__photo {
+      display: none;
+    }
+
+    &__text {
+      max-width: 80vw;
+    }
+
+    &__strategy {
+      max-width: 80vw;
+      margin-top: 30px;
+      margin-bottom: 50px;
+
+      &__desc {
+        color: $violet
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    grid-template-columns: 0 1fr auto;
+
+    .box-border {
+      width: 12vw;
+      height: 12vw;
+    }
+
+    &__content {
+      font-size: 3vw;
+    }
+
+    &__link {
+      font-size: 3vw;
+      padding: 8px 14px;
+    }
+  }
+
+  .heading {
+    &__content {
+      padding: 10vw 0;
+    }
+
+    &__subtitle {
+      font-size: 3.4vw;
+    }
+
+    &__title {
+      font-size: 9vw;
+    }
+
+  }
+
+  .featured {
+    &__heading {
+      margin-top: -23vw;
+      background-size: 131% 93%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .medal {
+    &__content {
+      margin-left: 0;
+      margin-top: 15vw;
+    }
+
+    &__item {
+      width: 33%;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heading {
+    &__content {
+      padding: 50px 0;
+    }
+
+    &__btn {
+      width: 145px;
+      height: 40px;
+      font-size: 3.5vw;
+      margin-top: 22px;
+    }
+  }
+
+  .featured {
+    &__heading {
+      margin-top: -29vw;
+
+      &__content {
+        padding: 80px 0;
+      }
+
+      &__title {
+        font-size: 5vw;
+      }
+
+      &__btn {
+        width: 145px;
+        height: 40px;
+        font-size: 3.5vw;
+        margin-top: 22px;
+      }
+    }
+
+    &__title {
+      font-size: 7vw;
+
+      span {
+        font-size: 4.5vw;
+      }
+    }
+
+    &__clients {
+      padding-left: 0;
+
+      &__title {
+        margin: 30px 0 15px;
+      }
+
+      &__name {
+        font-size: 14px;
+      }
+
+      &__desc {
+        font-size: 14px;
+      }
+
+      &__btn {
+        width: 140px;
+        height: 65px;
+        margin-left: 20px;
+        margin-top: 50px;
+
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .medal {
+    &__content {
+      margin-top: 9vw;
+    }
+  }
+
+  .benefits__strategy__btn {
+    width: calc(100vw - 30px);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .heading__content {
+    padding: 45px 0 30px;
+  }
+}
